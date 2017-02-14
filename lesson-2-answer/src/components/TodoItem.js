@@ -7,9 +7,9 @@ export default class TodoItem extends Component {
   static propTypes = {
     todo: PropTypes.object.isRequired,
     editTodo: PropTypes.func.isRequired,
-    deleteTodo: PropTypes.func.isRequired,
-    completeTodo: PropTypes.func.isRequired,
     likeTodo: PropTypes.func.isRequired,
+    deleteTodo: PropTypes.func.isRequired,
+    completeTodo: PropTypes.func.isRequired
   }
 
   state = {
@@ -30,7 +30,7 @@ export default class TodoItem extends Component {
   }
 
   render() {
-    const { todo, completeTodo, deleteTodo, likeTodo } = this.props
+    const { todo, completeTodo, likeTodo, deleteTodo } = this.props
 
     let element
     if (this.state.editing) {
@@ -49,11 +49,9 @@ export default class TodoItem extends Component {
           <label onDoubleClick={this.handleDoubleClick}>
             {todo.text}
           </label>
-          <LikeButton
-            numLikes={todo.numLikes}
-            id={todo.id}
-            handleClick={likeTodo}
-          />
+          <LikeButton numLikes={todo.numLikes}
+                      handleClick={likeTodo}
+                      id={todo.id} />
           <button className="destroy"
                   onClick={() => deleteTodo(todo.id)} />
         </div>
