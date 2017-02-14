@@ -1,6 +1,11 @@
 {
   "name": "waterwheel-training",
   "version": "0.0.1",
+  "author": {
+    "name": "Four Kitchens",
+    "id": 348885,
+    "url": "https://github.com/fourkitchens"
+  },
   "private": true,
   "license": "MIT",
   "devDependencies": {
