@@ -1,0 +1,57 @@
+{
+  "name": "waterwheel-training",
+  "version": "0.0.1",
+  "private": true,
+  "license": "MIT",
+  "devDependencies": {
+    "emdaer": "^0.3.3",
+    "enzyme": "^2.4.1",
+    "gh-pages": "^0.12.0",
+    "react-addons-test-utils": "^15.3.0",
+    "react-scripts": "^0.9.0"
+  },
+  "dependencies": {
+    "bluebird": "^3.4.7",
+    "classnames": "^2.2.5",
+    "jsonapi-relate": "^2.0.0",
+    "react": "^15.3.0",
+    "react-dom": "^15.3.0",
+    "react-redux": "^4.4.5",
+    "react-router": "4.0.0-alpha.6",
+    "redux": "^3.5.2",
+    "redux-thunk": "^2.1.0",
+    "todomvc-app-css": "^2.0.6"
+  },
+  "scripts": {
+    "write-readme": "emdaer"
+  },
+  "contributors": [
+    {
+      "name": "Luke",
+      "id": 1127238,
+      "email": "luke@fourkitchens.com",
+      "url": "https://github.com/infiniteluke"
+    },
+    {
+      "name": "Mike",
+      "id": 251658,
+      "email": "mike@fourkitchens.com",
+      "url": "https://github.com/mirzu"
+    },
+    {
+      "name": "Randy",
+      "id": 409903,
+      "email": "randy@fourkitchens.com",
+      "url": "https://github.com/amazingrando"
+    },
+    {
+      "name": "Taylor",
+      "id": 1486573,
+      "email": "taylor@fourkitchens.com",
+      "url": "https://github.com/tsmith512"
+    }
+  ],
+  "engines": {
+    "node": ">=6.0.0"
+  }
+}

@@ -1,0 +1,9 @@
+- title: true
+- shields:
+    style: 'flat-square'
+    shields:
+      - alt: 'Four Kitchens'
+        image: 'badge/4K-Four%20Kitchens-35AA4E.svg'
+        link: 'https://fourkitchens.com/'
+- text: 'Lessons + Code examples for the 4K Drupal 8 + React + Waterwheel training'
+- contributors: true
