@@ -7,4 +7,5 @@
         link: 'https://fourkitchens.com/'
 - text: 'Lessons + Code examples for the 4K Drupal 8 + React + Waterwheel training'
 - contributors: true
+- include: './docs/prereqs.md'
 - include: './docs/usage.md'
