@@ -4,5 +4,11 @@
 - `npm install -g yarn` - Install yarn package manager
 - `yarn` - Install all training dependencies
 - `cd lesson-2-answer` - Change directory into desired lesson
+- Inside `src/config` create `local.json` with the clientSecret in it.
+```
+{
+  "client_secret": "abc123"
+}
+```
 - `yarn start` - Start the app
 - Browser window will open and code changes will hot reload
