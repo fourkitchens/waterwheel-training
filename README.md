@@ -13,6 +13,8 @@ Lessons + Code examples for the 4K Drupal 8 + React + Waterwheel training
 * [nvm](https://github.com/creationix/nvm) installed
 * [yarn](https://yarnpkg.com) for package management
 * [Postman](https://www.getpostman.com) for testing out the API
+* React Dev Tools ([Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)/[Firefox](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/))
+* Redux Dev Tools ([Chrome](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd)/[Firefox](https://addons.mozilla.org/en-US/firefox/addon/remotedev/?src=ss))
 
 ## Usage
 - `git clone git@github.com:fourkitchens/waterwheel-training.git && cd waterwheel-training` - Clone this repo and change directory into it
