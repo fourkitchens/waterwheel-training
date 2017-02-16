@@ -8,7 +8,8 @@ export default class TodoItem extends Component {
     todo: PropTypes.object.isRequired,
     editTodo: PropTypes.func.isRequired,
     deleteTodo: PropTypes.func.isRequired,
-    completeTodo: PropTypes.func.isRequired
+    completeTodo: PropTypes.func.isRequired,
+    // likeTodo: PropTypes.func.isRequired
   }
 
   state = {
@@ -29,7 +30,7 @@ export default class TodoItem extends Component {
   }
 
   render() {
-    const { todo, completeTodo, deleteTodo } = this.props
+    const { todo, completeTodo, deleteTodo/*, likeTodo*/ } = this.props
 
     let element
     if (this.state.editing) {
@@ -49,6 +50,7 @@ export default class TodoItem extends Component {
             {todo.text}
           </label>
           <LikeButton numLikes={todo.numLikes}
+                      // handleClick={likeTodo}
                       id={todo.id} />
           <button className="destroy"
                   onClick={() => deleteTodo(todo.id)} />
