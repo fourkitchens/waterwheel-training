@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react'
 
-const LikeButton = ({ numLikes, id/*, handleClick*/ }) => (
+const LikeButton = ({ numLikes, id }) => (
   <div className="like">
     <div className="numLikes">
       {numLikes}
@@ -12,7 +12,6 @@ const LikeButton = ({ numLikes, id/*, handleClick*/ }) => (
 LikeButton.propTypes = {
   numLikes: PropTypes.number.isRequired,
   id: PropTypes.number.isRequired,
-  // handleClick: PropTypes.func.isRequired
 }
 
 export default LikeButton

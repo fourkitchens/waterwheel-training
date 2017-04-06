@@ -1,17 +1,15 @@
-import { ADD_TODO, DELETE_TODO, EDIT_TODO, COMPLETE_TODO, /*LIKE_TODO,*/ COMPLETE_ALL, CLEAR_COMPLETED } from '../constants/ActionTypes'
+import { ADD_TODO, DELETE_TODO, EDIT_TODO, COMPLETE_TODO, COMPLETE_ALL, CLEAR_COMPLETED } from '../constants/ActionTypes'
 
 const initialState = [
   {
     text: 'Add a like button',
     completed: true,
-    id: 1,
-    numLikes: 0,
+    id: 1
   },
   {
-    text: 'Use Redux',
+    text: 'Handle state changes',
     completed: false,
-    id: 0,
-    numLikes: 0,
+    id: 0
   }
 ]
 
@@ -22,8 +20,7 @@ export default function todos(state = initialState, action) {
         {
           id: state.reduce((maxId, todo) => Math.max(todo.id, maxId), -1) + 1,
           completed: false,
-          text: action.text,
-          numLikes: 0,
+          text: action.text
         },
         ...state
       ]

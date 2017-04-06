@@ -9,15 +9,15 @@ export default class TodoItem extends Component {
     editTodo: PropTypes.func.isRequired,
     deleteTodo: PropTypes.func.isRequired,
     completeTodo: PropTypes.func.isRequired,
-    // likeTodo: PropTypes.func.isRequired
   }
 
   state = {
+    numLikes: 0,
     editing: false
   }
 
   handleDoubleClick = () => {
-    this.setState({ editing: true })
+    this.setState(() => ({ editing: true }))
   }
 
   handleSave = (id, text) => {
@@ -26,11 +26,11 @@ export default class TodoItem extends Component {
     } else {
       this.props.editTodo(id, text)
     }
-    this.setState({ editing: false })
+    this.setState(() => ({ editing: false }))
   }
 
   render() {
-    const { todo, completeTodo, deleteTodo/*, likeTodo*/ } = this.props
+    const { todo, completeTodo, deleteTodo } = this.props
 
     let element
     if (this.state.editing) {
@@ -49,8 +49,7 @@ export default class TodoItem extends Component {
           <label onDoubleClick={this.handleDoubleClick}>
             {todo.text}
           </label>
-          <LikeButton numLikes={todo.numLikes}
-                      // handleClick={likeTodo}
+          <LikeButton numLikes={this.state.numLikes}
                       id={todo.id} />
           <button className="destroy"
                   onClick={() => deleteTodo(todo.id)} />

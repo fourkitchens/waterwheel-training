@@ -1,32 +1,10 @@
-import { ADD_TODO, DELETE_TODO, EDIT_TODO, COMPLETE_TODO, COMPLETE_ALL, CLEAR_COMPLETED } from '../constants/ActionTypes'
+import { ADD_TODO, DELETE_TODO, EDIT_TODO, COMPLETE_TODO, LIKE_TODO, COMPLETE_ALL, CLEAR_COMPLETED } from '../constants/ActionTypes'
 
-const initialState = [
-  {
-    text: 'Add a like button',
-    completed: true,
-    id: 2
-  },
-  {
-    text: 'Handle state changes',
-    completed: true,
-    id: 1
-  },
-  {
-    text: 'Connect to Drupal with Waterwheel!',
-    completed: false,
-    id: 0
-  }
-]
-
-export default function todos(state = initialState, action) {
+export default function todos(state = [], action) {
   switch (action.type) {
     case ADD_TODO:
       return [
-        {
-          id: state.reduce((maxId, todo) => Math.max(todo.id, maxId), -1) + 1,
-          completed: false,
-          text: action.text
-        },
+        { ...action.todo },
         ...state
       ]
 
@@ -46,6 +24,13 @@ export default function todos(state = initialState, action) {
       return state.map(todo =>
         todo.id === action.id ?
           { ...todo, completed: !todo.completed } :
+          todo
+      )
+
+    case LIKE_TODO:
+      return state.map(todo =>
+        todo.id === action.id ?
+          { ...todo, numLikes: todo.numLikes + 1 } :
           todo
       )
 

@@ -1,20 +1,23 @@
-import { ADD_TODO, DELETE_TODO, EDIT_TODO, COMPLETE_TODO, COMPLETE_ALL, CLEAR_COMPLETED } from '../constants/ActionTypes'
+import { ADD_TODO, DELETE_TODO, EDIT_TODO, LIKE_TODO, COMPLETE_TODO, COMPLETE_ALL, CLEAR_COMPLETED } from '../constants/ActionTypes'
 
 const initialState = [
   {
     text: 'Add a like button',
     completed: true,
-    id: 2
+    id: 2,
+    numLikes: 0,
   },
   {
-    text: 'Handle state changes',
+    text: 'Use Redux',
     completed: true,
-    id: 1
+    id: 1,
+    numLikes: 0,
   },
   {
     text: 'Connect to Drupal with Waterwheel!',
     completed: false,
-    id: 0
+    id: 0,
+    numLikes: 0,
   }
 ]
 
@@ -25,7 +28,8 @@ export default function todos(state = initialState, action) {
         {
           id: state.reduce((maxId, todo) => Math.max(todo.id, maxId), -1) + 1,
           completed: false,
-          text: action.text
+          text: action.text,
+          numLikes: 0,
         },
         ...state
       ]
@@ -46,6 +50,13 @@ export default function todos(state = initialState, action) {
       return state.map(todo =>
         todo.id === action.id ?
           { ...todo, completed: !todo.completed } :
+          todo
+      )
+
+    case LIKE_TODO:
+      return state.map(todo =>
+        todo.id === action.id ?
+          { ...todo, numLikes: todo.numLikes + 1 } :
           todo
       )
 
