@@ -71,5 +71,3 @@ export const clearCompleted = () => (dispatch, getState) => {
     dispatch({ type: types.CLEAR_COMPLETED })
   })
 }
-
-export const likeTodo = id => ({ type: types.LIKE_TODO, id })

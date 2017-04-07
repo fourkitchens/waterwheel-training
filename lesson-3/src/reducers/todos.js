@@ -1,4 +1,4 @@
-import { ADD_TODO, DELETE_TODO, EDIT_TODO, COMPLETE_TODO, LIKE_TODO, COMPLETE_ALL, CLEAR_COMPLETED } from '../constants/ActionTypes'
+import { ADD_TODO, DELETE_TODO, EDIT_TODO, COMPLETE_TODO, COMPLETE_ALL, CLEAR_COMPLETED } from '../constants/ActionTypes'
 
 export default function todos(state = [], action) {
   switch (action.type) {
@@ -24,13 +24,6 @@ export default function todos(state = [], action) {
       return state.map(todo =>
         todo.id === action.id ?
           { ...todo, completed: !todo.completed } :
-          todo
-      )
-
-    case LIKE_TODO:
-      return state.map(todo =>
-        todo.id === action.id ?
-          { ...todo, numLikes: todo.numLikes + 1 } :
           todo
       )
 
