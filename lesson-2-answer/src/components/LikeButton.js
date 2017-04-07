@@ -8,7 +8,7 @@ const LikeButton = ({ numLikes, id, handleClick }) => (
     <div className="numLikes">
       {numLikes}
     </div>            
-    <button className="likeTodo" onClick={()=> handleClick()}>{thumbsUp[numLikes % thumbsUp.length]}</button>
+    <button className="likeTodo" onClick={handleClick}>{thumbsUp[numLikes % thumbsUp.length]}</button>
   </div>
 );
 
