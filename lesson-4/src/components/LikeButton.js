@@ -1,16 +1,27 @@
 import React, { PropTypes, Component } from 'react'
 
-const thumbsUp = ['👍🏽','👍🏾','👍🏿','👍','👍🏻','👍🏼']
+const THUMBS = ['👍🏽','👍🏾','👍🏿','👍','👍🏻','👍🏼']
+
 
 class LikeButton extends Component {
   static propTypes = {
-    numLikes: PropTypes.number.isRequired,
     id: PropTypes.string.isRequired,
+    numLikes: PropTypes.number.isRequired,
+    likable: PropTypes.bool.isRequired,
     handleClick: PropTypes.func.isRequired,
+  }
+  
+  state = {
+    thumbsUp: '👍',
   }
 
   componentDidMount() {
-    this.timerId = setInterval(() => this.forceUpdate(), 1000);
+    // Every second, get a value from the array of thumbs an set the state.
+    this.timerId = setInterval(() => {
+      this.setState((prevState) => ({
+        thumbsUp: THUMBS[new Date().getSeconds() % THUMBS.length]
+      }))
+    }, 1000);
   }
 
   componentWillUnmount() {
@@ -18,13 +29,15 @@ class LikeButton extends Component {
   }
 
   render() {
-    const { numLikes, handleClick } = this.props;
+    const { numLikes, id, likable, handleClick } = this.props;
     return (
       <div className="like">
         <div className="numLikes">
           {numLikes}
-        </div>            
-        <button className="likeTodo" onClick={handleClick}>{thumbsUp[new Date().getSeconds() % thumbsUp.length]}</button>
+        </div>
+          <button className="likeTodo"
+            onClick={() => handleClick(id)}
+            disabled={!likable}>{this.state.thumbsUp}</button>
       </div>
     )
   }
