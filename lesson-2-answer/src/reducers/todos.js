@@ -4,7 +4,7 @@ const initialState = [
   {
     text: 'Add a like button',
     completed: true,
-    id: 2
+    id: 0
   },
   {
     text: 'Handle state changes',
@@ -14,7 +14,7 @@ const initialState = [
   {
     text: 'Connect to Drupal with Waterwheel!',
     completed: false,
-    id: 0
+    id: 2
   }
 ]
 
