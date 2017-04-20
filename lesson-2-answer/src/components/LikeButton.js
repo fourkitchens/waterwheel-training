@@ -1,6 +1,6 @@
 import React, { PropTypes, Component } from 'react'
 
-const thumbsUp = ['👍🏽','👍🏾','👍🏿','👍','👍🏻','👍🏼']
+const THUMBS = ['👍🏽','👍🏾','👍🏿','👍','👍🏻','👍🏼']
 
 class LikeButton extends Component {
   static propTypes = {
@@ -9,8 +9,17 @@ class LikeButton extends Component {
     handleClick: PropTypes.func.isRequired,
   }
 
+  state = {
+    thumbsUp: THUMBS[0]
+  }
+
   componentDidMount() {
-    this.timerId = setInterval(() => this.forceUpdate(), 1000);
+    // Every second, get a value from the array of thumbs an set the state.
+    this.timerId = setInterval(() => {
+      this.setState((prevState) => ({
+        thumbsUp: THUMBS[new Date().getSeconds() % THUMBS.length]
+      }))
+    }, 1000);
   }
 
   componentWillUnmount() {
@@ -24,7 +33,7 @@ class LikeButton extends Component {
         <div className="numLikes">
           {numLikes}
         </div>            
-        <button className="likeTodo" onClick={handleClick}>{thumbsUp[new Date().getSeconds() % thumbsUp.length]}</button>
+        <button className="likeTodo" onClick={handleClick}>{this.state.thumbsUp}</button>
       </div>
     )
   }

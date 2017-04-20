@@ -17,7 +17,6 @@ export default class TodoItem extends Component {
   }
 
   state = {
-    numLikes: 0,
     userLiked: '',
     likable: true,
     likes: this.props.likes,
