@@ -21,13 +21,14 @@ Lessons + Code examples for the 4K Drupal 8 + React + Waterwheel training
 - `nvm use` - Change to supported node version (Node 6) if you have [nvm](https://github.com/creationix/nvm) installed
 - `npm install -g yarn` - Install yarn package manager
 - `yarn` - Install all training dependencies
-- `cd lesson-2-answer` - Change directory into desired lesson
+- `cd lesson-3` - Change directory into desired lesson
 - Inside `src/config` create `local.json` with the clientSecret in it.
 ```
 {
   "client_secret": "abc123"
 }
 ```
+- Repeat this process for the `lesson-4` directory.
 - `yarn start` - Start the app
 - Browser window will open and code changes will hot reload
 
