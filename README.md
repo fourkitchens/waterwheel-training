@@ -28,7 +28,7 @@ Lessons + Code examples for the 4K Drupal 8 + React + Waterwheel training
   "client_secret": "abc123"
 }
 ```
-- `cd lesson-3-answer` - Change directory into Lesson 3 Answer
+- `cd ../lesson-3-answer` - Change directory into Lesson 3 Answer
 - Inside `src/config` create `local.json` with the clientSecret in it.
 ```
 {
@@ -36,5 +36,5 @@ Lessons + Code examples for the 4K Drupal 8 + React + Waterwheel training
 }
 ```
 - Now you are ready to start a lesson
-- cd to the desired lesson: `yarn start` - Start the app
+- cd to the desired lesson and `yarn start` - Start the app for the given lesson.
 - Browser window will open and code changes will hot reload
