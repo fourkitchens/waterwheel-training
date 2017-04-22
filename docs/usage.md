@@ -10,7 +10,7 @@
   "client_secret": "abc123"
 }
 ```
-- `cd lesson-4` - Change directory into desired lesson
+- `cd lesson-3-answer` - Change directory into desired lesson
 - Inside `src/config` create `local.json` with the clientSecret in it.
 ```
 {

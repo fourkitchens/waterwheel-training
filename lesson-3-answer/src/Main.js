@@ -17,7 +17,8 @@ window.waterwheel = new window.Waterwheel({
    grant_type: 'password',
    client_id: client_id,
    client_secret: client_secret,
-  }
+ },
+ timeout: 10000
 })
 
 export const MatchWhenAuthorized = ({ component: Component, ...rest }) => (
