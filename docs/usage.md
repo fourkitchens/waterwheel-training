@@ -3,12 +3,19 @@
 - `nvm use` - Change to supported node version (Node 6) if you have [nvm](https://github.com/creationix/nvm) installed
 - `npm install -g yarn` - Install yarn package manager
 - `yarn` - Install all training dependencies
-- `cd lesson-2-answer` - Change directory into desired lesson
+- `cd lesson-3` - Change directory into desired lesson
 - Inside `src/config` create `local.json` with the clientSecret in it.
 ```
 {
   "client_secret": "abc123"
 }
 ```
-- `yarn start` - Start the app
+- `cd lesson-4` - Change directory into desired lesson
+- Inside `src/config` create `local.json` with the clientSecret in it.
+```
+{
+  "client_secret": "abc123"
+}
+```
+- cd to the current lesson: `yarn start` - Start the app
 - Browser window will open and code changes will hot reload
