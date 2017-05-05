@@ -9,3 +9,4 @@
 - contributors: true
 - include: './docs/prereqs.md'
 - include: './docs/usage.md'
+- include: './docs/overview.md'

@@ -1,0 +1,8 @@
+## What are we going to build today?
+We are going to add a like button to a Multiuser Todo app. The Todo app is based on the [React Todo MVC example](http://todomvc.com/examples/react/#/). First we’ll add the "like" button as a React component and then follow up by connecting it to our Datastore. Since React leverages some new syntax that was introduced to Javascript in ES2016, we’ll give a quick intro there. We’ll put this particular “headless” architecture into context with other options and talk a bit about how to securely authenticate users. We don’t expect that anyone is going to leave an expert in all these new technologies, but hope that everyone will have the tools they need to dive deeper on their own.	
+Drupal is our API and Datastore. React handles rendering the UI, and Waterwheel makes using interacting with and authenticating against Drupal’s API easy.
+
+For an in depth overview of the course check out [the preview blog post](https://www.fourkitchens.com/blog/events/api-first-drupal-8-react-and-you/) for DrupalCon Baltimore.
+
+### NOTE:
+This training was originally written to use Redux for state management. To simplify the training and focus more on Waterwheel (along with [other reasons](https://twitter.com/lukeherrington/status/849863853550718976)), we’re going to use React’s built in setState to manage state. As you’ll see in some of the lesson code, the skeleton of this lesson still uses Redux, but you can safely ignore it. The Like button feature we’ll be adding won’t use it. There is a redux folder in the training repo if you’d like to explore on your own after the training.
