@@ -51,3 +51,37 @@ For an in depth overview of the course check out [the preview blog post](https:/
 ### NOTE:
 This training was originally written to use Redux for state management. To simplify the training and focus more on Waterwheel (along with [other reasons](https://twitter.com/lukeherrington/status/849863853550718976)), we’re going to use React’s built in setState to manage state. As you’ll see in some of the lesson code, the skeleton of this lesson still uses Redux, but you can safely ignore it. The Like button feature we’ll be adding won’t use it. There is a redux folder in the training repo if you’d like to explore on your own after the training.
 
+## Stretch Lessons
+- 🥉 BRONZE:  Add a filter that only show the logged in users likes called “Mine,”
+- 🥈 SILVER:  Add a message component that displays errors received from the server.
+- 🥇 GOLD:  Complete the lessons in the redux directory to learn about alternative state management techniques.
+## Future/Issues to watch
+- Follow progress on API First Initiative on this issue: https://www.drupal.org/node/2757967
+- There is an initiative to include JSON API and Simple Oauth in core as experimental modules. Those are currently postponed to mature in contrib.
+  - https://www.drupal.org/node/2757967#comment-12048411
+  - https://www.drupal.org/node/2834718
+- Subrequest module/spec is promising for bundling requests: https://www.drupal.org/project/subrequests
+- As of 8.3, Drupal ships with a package.json https://www.drupal.org/node/2809477 a big step forward for core JS development.
+- Conversion of core js to ES6: https://www.drupal.org/node/2815083
+- Writing unit tests for core JS: https://www.drupal.org/node/2815199
+- JSON API payload limited to 50 entities: https://www.drupal.org/node/2793233
+## Resources
+### Authentication
+- Simple OAuth Drupal module docs: https://www.drupal.org/node/2843627
+- Simple OAuth module video tutorial: https://www.youtube.com/playlist?list=PLZOQ_ZMpYrZtqy5-o7KoDhM3n6M0duBjX
+- How to chose which OAuth 2.0 Grant to use: https://oauth2.thephpleague.com/authorization-server/which-grant/
+### React
+- Docs: https://facebook.github.io/react/docs/hello-world.html
+- Creating new react apps quickly with create-react-app: https://github.com/facebookincubator/create-react-app
+- How to get the most out of create-react-app: https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md
+- Initial reference project: https://github.com/infiniteluke/todomvc-react-waterwheel
+- What is JSX? https://jasonformat.com/wtf-is-jsx/
+- The Future of React: https://www.youtube.com/watch?v=ZCuYPiUIONs
+- Accessibility: https://github.com/reactjs/react-a11y
+### API
+- JSON API spec: http://jsonapi.org/
+- Comprehensive JSON API Drupal module docs: https://www.drupal.org/docs/8/modules/json-api
+- JSON API Drupal module video tutorials: https://www.youtube.com/playlist?list=PLZOQ_ZMpYrZsyO-3IstImK1okrpfAjuMZ
+- Generate JSON Schema from Drupal 8: https://github.com/phase2/schemata
+- Decoupled Architecture Slides: https://docs.google.com/presentation/d/1CX3ENJrB71Al-ghuDjtvqpPtj8DCHsS9Tb53M2B19Z4/edit?usp=sharing
+- GraphQL vs REST: https://philsturgeon.uk/api/2017/01/24/graphql-vs-rest-overview/

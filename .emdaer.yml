@@ -10,3 +10,6 @@
 - include: './docs/prereqs.md'
 - include: './docs/usage.md'
 - include: './docs/overview.md'
+- include: './docs/stretch-lessons.md'
+- include: './docs/issues-to-watch.md'
+- include: './docs/resources.md'
